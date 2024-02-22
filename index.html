@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    html {
+      font-size: 16px;
+      line-height: 1.5;
+      background-color: #fff;
+      color: #000;
+    }
+
+    body {
+      margin: 0 auto;
+      max-width: 720px;
+      padding: 0 16px;
+      font-family: sans-serif;
+    }
+
+    a {
+      color: #db2777;
+      text-decoration: none;
+    }
+
+    header {
+      margin-bottom: 32px;
+      padding: 16px 0;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    nav div a {
+      margin-left: 16px;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    /* Dark mode styles */
+    @media (prefers-color-scheme: dark) {
+      html {
+        background-color: #1e293b;
+        color: #fff;
+      }
+
+      a {
+
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+{ 
+ "metadata": { 
+        "version": "1"     }, 
+    "content": [ {
+                "elementType": "form", 
+                "heading": "UHD Directory Search", 
+                "relativePath": "", 
+                "items": [ 
+                    { 
+                        "elementType": "input", 
+                        "inputType": "text", 
+                        "name": "search_term", 
+                        "label": "Please enter your search term", 
+                        "required": true, 
+                        "maxLength": "25" 
+                    }, 
+                    { 
+                        "elementType": "buttonContainer", 
+                        "buttons": [ 
+                            { 
+                                "elementType": "formButton", 
+                                "title": "Submit", 
+                                "buttonType": "submit", 
+                                "actionType": "constructive" 
+                            }, 
+                            { 
+                                "elementType": "formButton", 
+                                "title": "Reset", 
+                                "buttonType": "reset", 
+                                "actionType": "destructive" 
+                            } 
+                        ] 
+                    } 
+                ] 
+            } 
+        ] 
+    } 
+
+</body>
+
+</html>
