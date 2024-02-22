@@ -64,44 +64,34 @@
 </head>
 
 <body>
-{ 
- "metadata": { 
-        "version": "1"     }, 
-    "content": [ {
-                "elementType": "form", 
-                "heading": "UHD Directory Search", 
-                "relativePath": "", 
-                "items": [ 
-                    { 
-                        "elementType": "input", 
-                        "inputType": "text", 
-                        "name": "search_term", 
-                        "label": "Please enter your search term", 
-                        "required": true, 
-                        "maxLength": "25" 
-                    }, 
-                    { 
-                        "elementType": "buttonContainer", 
-                        "buttons": [ 
-                            { 
-                                "elementType": "formButton", 
-                                "title": "Submit", 
-                                "buttonType": "submit", 
-                                "actionType": "constructive" 
-                            }, 
-                            { 
-                                "elementType": "formButton", 
-                                "title": "Reset", 
-                                "buttonType": "reset", 
-                                "actionType": "destructive" 
-                            } 
-                        ] 
-                    } 
-                ] 
-            } 
-        ] 
-    } 
-
+  <header>
+    <nav>
+      <strong>JSON Server</strong>
+      <div>
+        <a href="https://github.com/typicode/json-server">Docs</a>
+        <a href="https://github.com/sponsors/typicode">♡ Sponsor</a>
+      </div>
+    </nav>
+  </header>
+  <main class="my-12">
+    <p class="bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-transparent bg-clip-text">✧*｡٩(ˊᗜˋ*)و✧*｡</p>
+    <% if (Object.keys(it.data).length===0) { %>
+      <p>No resources found in JSON file</p>
+    <% } %>
+    <% Object.entries(it.data).forEach(function([name]) { %>
+      <ul>
+        <li>
+          <a href="<%= name %>">/<%= name %></a>
+          <span>
+            <% if (Array.isArray(it.data[name])) { %>
+              - <%= it.data[name].length %>
+                <%= it.data[name].length> 1 ? 'items' : 'item' %>
+          </span>
+          <% } %>
+        </li>
+      </ul>
+    <% }) %>
+  </main>
 </body>
 
 </html>
